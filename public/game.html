@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoneWolfPop - Game</title>
+    <link type="text/css" rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <div id="logout">
+    <p><a href="login.html">Logout</a></p>
+    </div>
+    
+    <h1>Welcome to LoneWolfPop!</h1>
+    <!-- Game Area -->
+    <div id="game-area">
+        <img id="wolf" src="img/wolf.png" alt="Wolf" onclick="popWolf()">
+        <p>Your Score: <span id="score">0</span></p>
+    </div>
+
+    <!-- Leaderboard Area -->
+    <div id="leaderboard-container">
+        <h2>Leaderboard</h2>
+        <div id="leaderboard"></div>
+    </div>
+
+    <script src="js/game.js"></script>
+    <script src="js/leaderboard.js"></script>
+</body>
+</html>

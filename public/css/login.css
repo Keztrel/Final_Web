@@ -1,0 +1,139 @@
+/* กำหนดรูปแบบพื้นฐานให้กับทั้งหน้า */ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/img/login.gif);
+    background-size: cover;
+}
+
+fieldset {
+    color: white;
+    }
+
+/* คอนเทนเนอร์ของฟอร์ม */
+#container {
+    background-color: #4f4f4f; /* สีของฟอร์มที่สว่างขึ้น */
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 0 0 2px #00a6ff; /* กำหนดขอบเป็นเส้นสีฟ้า */
+    animation: pulseEffect 1.5s infinite ease-in-out; /* เพิ่มเอฟเฟกต์ Pulse */
+}
+
+/* การเคลื่อนไหวกรอบเส้น Pulse */
+@keyframes pulseEffect {
+    0% {
+        box-shadow: 0 0 0 2px #00a6ff; /* ขอบปกติ */
+    }
+    50% {
+        box-shadow: 0 0 0 6px #00eaff; /* ขอบขยายใหญ่ขึ้น */
+    }
+    100% {
+        box-shadow: 0 0 0 2px #00a6ff; /* กลับสู่ขนาดเดิม */
+    }
+}
+
+/* ฟอร์ม */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ตกแต่งแต่ละ input */
+input[type="text"], input[type="password"] {
+    padding: 10px; /* เพิ่มพื้นที่ภายใน */
+    margin-bottom: 15px;
+    border: 2px solid #00a6ff; 
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    background-color: #333; /* พื้นหลังของ input ให้เข้ากับธีม */
+    color: white; /* เปลี่ยนข้อความให้เป็นสีขาว */
+    box-sizing: border-box; /* ทำให้ padding ไม่เพิ่มขนาดของ input */
+}
+
+/* เปลี่ยนสีขอบเมื่อช่องกรอกข้อมูลถูกเลือก */
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #00eaff; 
+    outline: none; /* ลบขอบเบื้องต้นของเบราว์เซอร์ */
+}
+
+/* ปุ่ม Login */
+input[type="submit"] {
+    background-color: #00a6ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0062ff; 
+}
+
+/* เพิ่มการจัดรูปแบบให้กับข้อความผิดพลาด */
+#errordisplay {
+    color: #e74c3c; /* สีแดงสำหรับข้อความผิดพลาด */
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/* ตกแต่ง title (legend) */
+legend {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00a6ff; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* 
+#container{
+	padding-top: 100px;
+	margin: auto;
+	width: 200px;
+}
+
+body{
+	background-image: url(/img/bg1.gif);
+	background-size: cover;
+}
+
+fieldset{
+	background-color: aliceblue;
+}
+
+legend{
+	background-color: rgb(21, 170, 233);
+	color: black;
+}
+.form{
+	
+	font-size:18px;
+}
+
+.form input{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size:18px;
+}
+
+#errordisplay{
+	/*margin-top: -20px;
+	font-size:12px;
+	color: #EE0019;
+}
+
+ */
